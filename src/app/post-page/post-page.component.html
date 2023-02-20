@@ -1,0 +1,19 @@
+<div
+*ngIf="post$ | async as post"
+class="post"
+>
+<!-- <pre>{{post | json}}</pre> -->
+    <div class="header">
+        <h1>{{post.title}}</h1>
+        <button
+        [routerLink]="['/']"
+        class="btn btn-link">On main page</button>
+    </div>
+    <div class="info">
+        <strong>{{post.author}}</strong>
+        <small>{{post.date | date}}</small>
+    </div>
+    <div>
+        <p>{{post.text}}</p>
+    </div>
+</div>
